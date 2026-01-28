@@ -1,0 +1,675 @@
+/* ========== RESET & GLOBAL ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========== HEADER & NAVIGATION ========== */
+.header {
+    background: linear-gradient(135deg, #066A67 0%, #024644 100%);  /* ← GANTI */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 9000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.logo i {
+    font-size: 28px;
+}
+
+.logo small {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #90C1BE;  /* ← GANTI */
+    text-decoration: underline;
+}
+
+/* Logo di navbar */
+.logo-img{
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+/* ========== HERO SECTION ========== */
+.hero {
+    background: linear-gradient(rgba(6, 106, 103, 0.8), rgba(2, 70, 68, 0.8)),  /* ← GANTI */
+                url('../images/hero-bg.jpg') center/cover;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.hero-desc {
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.8;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 12px 30px;
+    background: white;
+    color: #066A67;  /* ← GANTI */
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #C2E1DF;  /* ← GANTI */
+    transform: scale(1.05);
+}
+
+/* ========== SECTION HEADER ========== */
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    color: #066A67;  /* ← GANTI */
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    color: #7f8c8d;
+    font-size: 1rem;
+}
+
+/* ========== MAP SECTION ========== */
+.map-section {
+    padding: 60px 20px;
+    background: #C2E1DF;  /* ← GANTI */
+}
+
+.map-wrapper {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+#map {
+    width: 100%;
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+/* Button zoom sekunder (untuk lihat semua) */
+.btn-zoom-secondary {
+    background: white;
+    border: 2px solid #066A67;  /* ← GANTI */
+    color: #066A67;  /* ← GANTI */
+}
+
+.btn-zoom-secondary:hover {
+    background: #066A67;  /* ← GANTI */
+    color: white;
+}
+
+/* ========== INFO LOKASI CARD (BARU) ========== */
+.info-lokasi {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.info-lokasi-item {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: 0.3s;
+    border-top: 4px solid #457B79;  /* ← GANTI */
+}
+
+.info-lokasi-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(6, 106, 103, 0.15);  /* ← GANTI */
+}
+
+.info-label {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.info-value {
+    font-size: 20px;
+    color: #066A67;  /* ← GANTI */
+    font-weight: bold;
+}
+
+/* ========== BUTTON ZOOM (OVERLAY DI DALAM PETA) ========== */
+.btn-zoom {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    padding: 10px 20px;
+    background: white;
+    border: 2px solid #066A67;  /* ← GANTI */
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #066A67;  /* ← GANTI */
+    transition: 0.3s;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.btn-zoom:hover {
+    background: #066A67;  /* ← GANTI */
+    color: white;
+    transform: scale(1.05);
+}
+
+.btn-zoom i {
+    margin-right: 5px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .info-lokasi {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========== INFO SECTION ========== */
+.info-section {
+    padding: 60px 20px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.info-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(6, 106, 103, 0.12);  /* ← GANTI */
+}
+
+.info-card .icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+}
+
+.icon.green { background: #066A67; }  /* ← GANTI */
+.icon.blue { background: #066A67; }  /* ← GANTI ke Cadet Teal */
+.icon.purple { background: #066A67; }  /* ← GANTI ke Light Teal */
+.icon.orange { background: #066A67; }  /* ← GANTI ke Dark Teal */
+
+.info-card h3 {
+    font-size: 2rem;
+    color: #066A67;  /* ← GANTI */
+    margin-bottom: 5px;
+}
+
+.info-card p {
+    color: #7f8c8d;
+}
+
+/* ========== DUSUN LIST (UPDATE) ========== */
+.dusun-list {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+}
+
+.dusun-list h3 {
+    margin-bottom: 20px;
+    color: #066A67;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dusun-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+    background: #C2E1DF;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.dusun-item:hover {
+    background: #90C1BE;
+    transform: translateX(5px);
+}
+
+.dusun-item:last-child {
+    margin-bottom: 0;
+}
+
+.badge {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.badge.teal-dark {
+    background: #066A67;
+}
+
+.dusun-info {
+    flex: 1;
+}
+
+.dusun-info strong {
+    display: block;
+    color: #024644;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* RW Badges */
+.rw-badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.rw-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #2c3e50;
+    border: 2px solid;
+    transition: 0.3s;
+}
+
+.rw-badge i {
+    font-size: 10px;
+}
+
+/* Warna sesuai legenda peta */
+.rw-badge.rw-01 {
+    background: #FFE082;
+    border-color: #FFB300;
+}
+
+.rw-badge.rw-02 {
+    background: #FFAB91;
+    border-color: #FF6F00;
+}
+
+.rw-badge.rw-03 {
+    background: #A5D6A7;
+    border-color: #4CAF50;
+}
+
+.rw-badge.rw-04 {
+    background: #66BB6A;
+    border-color: #2E7D32;
+}
+
+.rw-badge:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Info Umum */
+.info-umum {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+.info-umum h3 {
+    margin-bottom: 15px;
+    color: #066A67;  /* ← GANTI */
+}
+
+.info-umum table {
+    width: 100%;
+}
+
+.info-umum table tr {
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.info-umum table td {
+    padding: 12px 5px;
+}
+
+/* ========== PRODUK SECTION ========== */
+.produk-section {
+    padding: 60px 20px;
+    background: #f8f9fa;
+}
+
+.produk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.produk-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.produk-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(6, 106, 103, 0.15);  /* ← GANTI */
+}
+
+.produk-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.produk-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.produk-card:hover .produk-image img {
+    transform: scale(1.1);
+}
+
+.badge-verified {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #066A67;  /* ← GANTI */
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.produk-info {
+    padding: 20px;
+}
+
+.produk-info h3 {
+    color: #066A67;  /* ← GANTI */
+    margin-bottom: 10px;
+}
+
+.produk-info p {
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+/* ========== FOOTER ========== */
+.footer{
+  background: #024644;
+  color: white;
+  padding: 50px 20px 20px;
+}
+
+/* Logo di footer */
+.footer-logo-img{
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+
+}
+.footer-grid{
+  display: grid;
+  /* kiri lebih lebar, tengah pas, kanan kecil (biar tengah terlihat benar-benar di tengah) */
+  grid-template-columns: 1.25fr 1fr 0.75fr;
+  gap: 60px;
+  margin-bottom: 40px;
+  align-items: start;
+}
+
+/* penting agar teks panjang (email) tidak memaksa kolom melebar */
+.footer-col{
+  min-width: 0;
+}
+
+.footer-logo{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-logo i{
+  font-size: 30px;
+  color: #90C1BE;
+}
+
+.footer-col p{
+  color: #bdc3c7;
+  line-height: 1.8;
+}
+
+.footer-col h3{
+  margin-bottom: 15px;
+  color: #90C1BE;
+}
+
+/* HAPUS penggeser yang bikin tidak konsisten */
+.footer-col.quick{ 
+  margin-left: 0;
+}
+.footer-contact{
+  padding-left: 0;
+}
+
+/* Kolom kanan tetap “nempel kanan” tapi masih sejajar dengan container */
+.footer-quick{
+  justify-self: start;
+  text-align: left;
+}
+
+/* List */
+.contact-list,
+.quick-links{
+  list-style: none;
+}
+
+.contact-list li,
+.quick-links li{
+  margin-bottom: 12px;
+  color: #bdc3c7;
+}
+
+/* Contact list: icon + teks, dan email bisa turun baris */
+.footer .contact-list li{
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+}
+
+.footer .contact-list li i{
+  color: #90C1BE;
+  margin-right: 0;
+  margin-top: 3px;
+}
+
+.footer .contact-list li{
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Links */
+.quick-links a{
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.quick-links a:hover{
+  color: #90C1BE;
+}
+
+/* Divider bawah */
+.footer-bottom{
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #457B79;
+  color: #95a5a6;
+}
+
+/* Responsive */
+@media (max-width: 768px){
+  .footer-grid{
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .footer-quick{
+    justify-self: start;
+  }
+}
+
+.footer-grid{
+  grid-template-columns: 1.15fr 1.25fr 0.6fr; /* kolom tengah lebih lebar */
+  gap: 60px;
+}
+
+/* ========== LEGEND PETA ========== */
+.legend {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+    font-size: 13px;
+    line-height: 1.5;
+    max-width: 200px;
+}
+
+.legend h4 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #066A67;  /* ← GANTI */
+    border-bottom: 2px solid #457B79;  /* ← GANTI */
+    padding-bottom: 5px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.legend-item span {
+    width: 25px;
+    height: 18px;
+    margin-right: 10px;
+    border: 1px solid #2c3e50;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.legend-item:last-child {
+    margin-bottom: 0;
+}
