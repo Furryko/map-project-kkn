@@ -1,57 +1,55 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peta Digital Desa Gendereh</title>
-    
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    
-    <!-- Font Awesome (untuk ikon) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peta Digital Desa Gendereh</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- ========== HEADER & NAVIGATION ========== -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">
-                    <img src="images/logo-sumedang.png" alt="Logo Sumedang" class="logo-img">
-                    <span>Peta Digital<br><small>Desa Gendereh</small></span>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="#beranda">Beranda</a></li>
-                    <li><a href="#peta">Peta</a></li>
-                    <li><a href="#informasi">Informasi</a></li>
-                    <li><a href="#produk">Produk</a></li>
-                    <li><a href="#kontak">Kontak</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
 
-    <!-- ========== HERO SECTION ========== -->
-    <section id="beranda" class="hero">
-        <div class="hero-overlay">
-            <div class="container">
-                <div class="hero-icon">
-                    <i class="fas fa-map-marked-alt"></i>
-                </div>
-                <h1>Selamat Datang di Peta Digital Desa Gendereh</h1>
-                <p>Kecamatan Buahdua, Kabupaten Sumedang, Jawa Barat</p>
-                <p class="hero-desc">
-                    Peta ini dibuat sebagai upaya untuk memudahkan masyarakat dalam mengakses 
-                    informasi geografis dan potensi desa. Dilengkapi dengan data interaktif yang 
-                    menggambar berbagai lokasi penting dan peluang ekonomi yang ada di Desa Gendereh logi!
-                </p>
-                <a href="#peta" class="btn-primary">Lihat Peta</a>
-            </div>
+  <header class="header">
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <img src="images/logo-sumedang.png" alt="Logo Sumedang" class="logo-img">
+          <span class="logo-text">
+            Peta Digital<br>
+            <small>Desa Gendereh</small>
+          </span>
         </div>
-    </section>
+
+        <ul class="nav-menu">
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#peta">Peta</a></li>
+          <li><a href="#informasi">Informasi</a></li>
+          <li><a href="#produk">Produk</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section id="beranda" class="hero">
+    <div class="hero-overlay">
+      <div class="container">
+        <div class="hero-icon">
+          <i class="fas fa-map-marked-alt"></i>
+        </div>
+        <h1>Selamat Datang di Peta Digital Desa Gendereh</h1>
+        <p>Kecamatan Buahdua, Kabupaten Sumedang, Jawa Barat</p>
+        <p class="hero-desc">
+          Peta ini dibuat sebagai upaya untuk memudahkan masyarakat dalam mengakses
+          informasi geografis dan potensi desa.
+        </p>
+        <a href="#peta" class="btn-primary">Lihat Peta</a>
+      </div>
+    </div>
+  </section>
 
 <!-- ========== PETA WILAYAH ========== -->
 <section id="peta" class="map-section">
@@ -179,7 +177,7 @@
                     </tr>
                     <tr>
                         <td>Luas Wilayah</td>
-                        <td><strong>±275 Hektar</strong></td>
+                        <td><strong>±752` Hektar</strong></td>
                     </tr>
                     <tr>
                         <td>Batas Wilayah Utara</td>
@@ -243,51 +241,50 @@
 </section>
 
     <!-- ========== FOOTER ========== -->
-    <footer id="kontak" class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <!-- Kolom 1: Info Desa -->
-                <div class="footer-col">
-                    <div class="footer-logo">
-                        <img src="images/logo-sumedang.png" alt="Logo Sumedang" class="footer-logo-img">
-                        <span>Peta Digital</span>
-                    </div>
-                    <p>Sistem Informasi Geografis Desa Gendereh, Kecamatan Buahdua, Kabupaten Sumedang, Jawa Barat. Dibuat untuk meningkatkan aksesibilitas informasi potensi desa.</p>
-                </div>
-                
-                <!-- Kolom 2: Kontak Kami -->
-                <div class="footer-col footer-contact">
-                    <h3>Kontak Kami</h3>
-                    <ul class="contact-list">
-                        <li><i class="fas fa-map-pin"></i> Alamat: Desa Gendereh, Buahdua</li>
-                        <li><i class="fas fa-phone"></i> Telepon: +6281220112686</li>
-                        <li><i class="fas fa-envelope"></i> Email: wawanhermawanspdwawan@gmail.com</li>
-                        <li><i class="fas fa-globe"></i> Website: desagendereh.sumedangkab.go.id</li>
-                    </ul>
-                </div>
-                
-                <!-- Kolom 3: Tautan Cepat -->
-                <div class="footer-col footer-quick">
-                    <h3>Tautan Cepat</h3>
-                    <ul class="quick-links">
-                        <li><a href="#beranda">Beranda</a></li>
-                        <li><a href="#peta">Peta Wilayah</a></li>
-                        <li><a href="#informasi">Informasi Desa</a></li>
-                        <li><a href="#produk">Produk Potensi</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 Desa Gendereh. Seluruh hak cipta dilindungi | Dibuat oleh KKN Universitas Sebelas April Sumedang</p>
-            </div>
-        </div>
-    </footer>
+  <footer id="kontak" class="footer">
+    <div class="container">
+      <div class="footer-grid">
 
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    
-    <!-- Custom JS -->
-    <script src="js/main.js"></script>
+        <div class="footer-col">
+          <div class="footer-logo">
+            <img src="images/logo-sumedang.png" alt="Logo Sumedang" class="footer-logo-img">
+            <span>Peta Digital</span>
+          </div>
+          <p>
+            Sistem Informasi Geografis Desa Gendereh, Kecamatan Buahdua, Kabupaten Sumedang, Jawa Barat.
+            Dibuat untuk meningkatkan aksesibilitas informasi potensi desa.
+          </p>
+        </div>
+
+        <div class="footer-col footer-contact">
+          <h3>Kontak Kami</h3>
+          <ul class="contact-list">
+            <li><i class="fas fa-map-pin"></i> <span>Alamat: Desa Gendereh, Buahdua</span></li>
+            <li><i class="fas fa-phone"></i> <span>Telepon: +6281220112686</span></li>
+            <li><i class="fas fa-envelope"></i> <span>Email: wawanhermawanspdwawan@gmail.com</span></li>
+            <li><i class="fas fa-globe"></i> <span>Website: desagendereh.sumedangkab.go.id</span></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-quick">
+          <h3>Tautan Cepat</h3>
+          <ul class="quick-links">
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#peta">Peta Wilayah</a></li>
+            <li><a href="#informasi">Informasi Desa</a></li>
+            <li><a href="#produk">Produk Potensi</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Desa Gendereh. Seluruh hak cipta dilindungi | Dibuat oleh KKN Universitas Sebelas April Sumedang</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
